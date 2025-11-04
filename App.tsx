@@ -119,9 +119,12 @@ const App: React.FC = () => {
   };
 
   const handleConfirmOrder = () => {
-    showToast("Thank you for shopping at our store.! We will get back to you soon.");
+    showToast("Your order will be processed and you will be contacted shortly.");
     setCheckoutModalOpen(false);
     setCart([]);
+    setTimeout(() => {
+      handleNavClick('home');
+    }, 3000); // Navigate to home after 3 seconds
   }
 
   return (
