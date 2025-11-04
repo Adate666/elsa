@@ -7,9 +7,7 @@ interface ContactSectionProps {
 
 const ContactSection = React.forwardRef<HTMLElement, ContactSectionProps>(({ onShowToast }, ref) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    onShowToast('Thank you for your message! We will get back to a great you soon.');
-    (e.target as HTMLFormElement).reset();
+    // Netlify will handle the form submission directly
   };
 
   return (

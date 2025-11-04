@@ -21,7 +21,7 @@ const HomeSection = React.forwardRef<HTMLElement, HomeSectionProps>(
       <section
         ref={ref}
         id="home"
-        className="h-full w-full snap-start relative flex flex-col justify-center items-center pt-48 px-8 md:px-16 pb-16"
+        className="h-full w-full snap-start relative flex flex-col justify-center items-center pt-64 px-8 md:px-16 pb-16"
       >
         <div className="flex-grow flex items-center justify-center w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">

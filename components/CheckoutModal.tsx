@@ -23,8 +23,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, onConfir
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    onConfirm();
+    // Netlify will handle the form submission directly
   }
 
   const handleSelectCountry = (country: Country) => {
@@ -44,7 +43,8 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, onConfir
           <h2 className="text-3xl font-extrabold text-[#12120D] mb-4">Delivery Information</h2>
           <p className="text-[#1D1D1B] mb-6 text-sm">Please provide your contact details. We will call you to arrange payment and delivery.</p>
           
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form name="delivery" data-netlify="true" onSubmit={handleSubmit} className="space-y-4">
+            <input type="hidden" name="form-name" value="delivery" />
             <div>
               <label htmlFor="checkout-name" className="sr-only">Full Name</label>
               <input type="text" id="checkout-name" required placeholder="Full Name" className={inputStyles} />
