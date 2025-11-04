@@ -44,7 +44,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, onConfir
           <h2 className="text-3xl font-extrabold text-[#12120D] mb-4">Delivery Information</h2>
           <p className="text-[#1D1D1B] mb-6 text-sm">Please provide your contact details. We will call you to arrange payment and delivery.</p>
           
-          <form name="delivery" method="POST" data-netlify="true" className="space-y-4">
+          <form name="delivery" onSubmit={handleSubmit} className="space-y-4">
             <input type="hidden" name="form-name" value="delivery" />
             <div>
               <label htmlFor="checkout-name" className="sr-only">Full Name</label>
